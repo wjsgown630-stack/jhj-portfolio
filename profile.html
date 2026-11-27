@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="전해주 — UI/UX · 시각디자인 · 웹디자인 포트폴리오 프로필">
+  <title>전해주 | JEON HAEJU</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  color-scheme: light;
+  --color-text: #000;
+  --color-background: #fff;
+  --font-body: "Noto Sans", "Noto Sans KR", sans-serif;
+  --content-width: 1400px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, dl, dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #456b83;
+  outline-offset: 5px;
+}
+
+/* 1920px 기준: 이미지 x=122, 너비=1675, 프레임 높이=950 */
+.hero {
+  display: grid;
+  place-items: center;
+  height: clamp(420px, 49.479167vw, 950px);
+  overflow: hidden;
+}
+
+.hero__image {
+  width: min(87.239583%, 1675px);
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 1440px 그리드의 양쪽 20px 여백을 제외한 실제 콘텐츠 너비 */
+.profile {
+  min-height: 950px;
+  padding: 131px 48px 159px;
+}
+
+.profile__layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  column-gap: clamp(56px, 8.333333vw, 160px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.identity__photo {
+  width: 320px;
+  height: 411px;
+  object-fit: cover;
+}
+
+.identity__copy {
+  padding-left: 7px;
+}
+
+.identity__name {
+  margin-top: 27px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.identity__english {
+  margin-top: 4px;
+  font-size: 23px;
+  line-height: 31px;
+}
+
+.identity__rule {
+  height: 0;
+  margin: 23px 0 24px;
+  border: 0;
+  border-top: 1px solid currentColor;
+}
+
+.identity__field {
+  font-size: 21px;
+  line-height: 29px;
+}
+
+.identity__intro {
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.profile__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.profile__column {
+  display: grid;
+  grid-template-rows: 371px auto;
+  align-content: start;
+}
+
+.info__heading {
+  padding-bottom: 11px;
+  border-bottom: 1px solid currentColor;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.info__list {
+  display: grid;
+  gap: 30px;
+  margin-top: 39px;
+}
+
+.info__row {
+  display: grid;
+  grid-template-columns: 117px minmax(0, 1fr);
+  align-items: baseline;
+  min-height: 26px;
+}
+
+.info__row dt {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.info__row dd {
+  font-size: 19px;
+  line-height: 26px;
+  overflow-wrap: anywhere;
+}
+
+.info--skills .info__row {
+  grid-template-columns: 120px minmax(0, 1fr);
+}
+
+.info--skills dd {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.info__entries {
+  margin-top: 39px;
+}
+
+.info__entries h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.education-entry + .education-entry {
+  margin-top: 20px;
+}
+
+.education-entry > p {
+  margin-top: 12px;
+  font-size: 19px;
+  line-height: 26px;
+}
+
+.education-entry .education-entry__date {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.info--license .info__entries {
+  margin-top: 34px;
+}
+
+.license-entry + .license-entry {
+  margin-top: 27px;
+}
+
+.license-entry__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  padding-right: 30px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.license-entry time,
+.license-entry__date {
+  flex-shrink: 0;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+@media (max-width: 1599px) {
+  .profile__layout {
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 64px;
+  }
+
+  .identity__photo {
+    width: 280px;
+    height: auto;
+    aspect-ratio: 320 / 411;
+  }
+
+  .profile__details {
+    gap: 32px;
+  }
+
+  .info__row,
+  .info--skills .info__row {
+    grid-template-columns: 108px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .profile {
+    padding: 88px 40px 104px;
+  }
+
+  .profile__layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  .identity__photo {
+    width: 240px;
+  }
+
+  .identity__name {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+
+  .identity__field,
+  .identity__intro {
+    font-size: 17px;
+  }
+
+  .profile__details {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .profile__column {
+    grid-template-rows: none;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 699px) {
+  .hero {
+    height: 100svh;
+    min-height: 440px;
+    max-height: 950px;
+  }
+
+  .hero__image {
+    width: 100%;
+    object-position: 60% center;
+  }
+
+  .profile {
+    min-height: 0;
+    padding: 64px 24px 80px;
+  }
+
+  .profile__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 64px;
+    max-width: 440px;
+  }
+
+  .identity__photo {
+    width: min(100%, 320px);
+  }
+
+  .identity__copy {
+    padding-left: 0;
+  }
+
+  .identity__name {
+    margin-top: 24px;
+  }
+
+  .identity__english {
+    font-size: 21px;
+  }
+
+  .identity__rule {
+    margin-block: 24px;
+  }
+
+  .info__heading {
+    font-size: 28px;
+  }
+
+  .info__list {
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .info__row,
+  .info--skills .info__row {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .info__row dd {
+    font-size: 17px;
+  }
+
+  .info__row dt {
+    font-size: 15px;
+  }
+
+  .info__entries,
+  .info--license .info__entries {
+    margin-top: 28px;
+  }
+
+  .info__entries h3 {
+    font-size: 20px;
+  }
+
+  .education-entry > p {
+    font-size: 17px;
+  }
+
+  .license-entry__meta {
+    padding-right: 0;
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image,
+  [data-reveal] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
+
+  </style>
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+</head>
+<body>
+  <main>
+    <!-- Figma 42:297 — 접속 시 페이드 업 -->
+    <section class="hero" aria-label="포트폴리오 인트로">
+      <img class="hero__image" src="https://cdn.jsdelivr.net/gh/wjsgown630-stack/IN_A_GOWN@main/%ED%94%84%EB%A1%9C%ED%95%84/image/backimg1.png" alt="부드러운 푸른색과 노란빛 물결이 어우러진 추상 이미지" width="1671" height="941" fetchpriority="high">
+    </section>
+
+    <!-- Figma 42:300 — 스크롤 시 순차 등장 -->
+    <section class="profile" aria-labelledby="profile-name">
+      <div class="profile__layout">
+        <div class="identity" data-reveal-group>
+          <img class="identity__photo" data-reveal src="https://cdn.jsdelivr.net/gh/wjsgown630-stack/IN_A_GOWN@main/%ED%94%84%EB%A1%9C%ED%95%84/image/jhj.webp" alt="전해주 프로필 사진" width="796" height="1024" decoding="async">
+          <div class="identity__copy">
+            <h1 id="profile-name" class="identity__name" data-reveal>전해주</h1>
+            <p class="identity__english" lang="en" data-reveal>JEON HAEJU</p>
+            <hr class="identity__rule" data-reveal>
+            <p class="identity__field" data-reveal>UI/UX · 시각디자인 · 웹디자인</p>
+            <p class="identity__intro" data-reveal>소개 문구를 입력해 주세요.</p>
+          </div>
+        </div>
+
+        <div class="profile__details">
+          <div class="profile__column">
+            <section class="info info--about" aria-labelledby="about-heading" data-reveal-group>
+              <h2 id="about-heading" class="info__heading" lang="en" data-reveal>About</h2>
+              <dl class="info__list">
+                <div class="info__row" data-reveal><dt lang="en">Name</dt><dd>전해주</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Age</dt><dd>만 24세 / 2002.09.11</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Phone</dt><dd><a href="tel:01000000000">010-0000-0000</a></dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Email</dt><dd><a href="mailto:wjsgown135@naver.com">wjsgown135@naver.com</a></dd></div>
+              </dl>
+            </section>
+
+            <section class="info info--skills" aria-labelledby="skills-heading" data-reveal-group>
+              <h2 id="skills-heading" class="info__heading" lang="en" data-reveal>Skills</h2>
+              <dl class="info__list">
+                <div class="info__row" data-reveal><dt lang="en">Design</dt><dd lang="en">Figma · Photoshop · Illustrator</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Publishing</dt><dd lang="en">HTML · CSS</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Interaction</dt><dd lang="en">JavaScript · jQuery</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">AI</dt><dd>사용하는 AI 도구 입력</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <div class="profile__column">
+            <section class="info info--education" aria-labelledby="education-heading" data-reveal-group>
+              <h2 id="education-heading" class="info__heading" lang="en" data-reveal>Education</h2>
+              <div class="info__entries">
+                <div class="education-entry" data-reveal>
+                  <h3>교육기관 또는 학교명 입력</h3>
+                  <p>전공 또는 과정명 입력</p>
+                  <p class="education-entry__date">YYYY.MM – YYYY.MM</p>
+                </div>
+                <div class="education-entry" data-reveal>
+                  <h3>교육기관 또는 학교명 입력</h3>
+                  <p>전공 또는 과정명 입력</p>
+                  <p class="education-entry__date">YYYY.MM – YYYY.MM</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="info info--license" aria-labelledby="license-heading" data-reveal-group>
+              <h2 id="license-heading" class="info__heading" lang="en" data-reveal>License</h2>
+              <div class="info__entries">
+                <div class="license-entry" data-reveal>
+                  <h3 lang="en">GTQ photoshop</h3>
+                  <div class="license-entry__meta"><p>KCP자격</p><time datetime="2024-06">2024.06</time></div>
+                </div>
+                <div class="license-entry" data-reveal>
+                  <h3>자격증명 입력</h3>
+                  <div class="license-entry__meta"><p>발급기관 입력</p><p class="license-entry__date">YYYY.MM</p></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+/* global jQuery, gsap, ScrollTrigger */
+(function (window, document) {
+  "use strict";
+
+  // 콘텐츠는 기본적으로 보인다. CDN 로딩 실패 시에도 페이지를 읽을 수 있다.
+  if (!window.jQuery || !window.gsap || !window.ScrollTrigger) return;
+
+  jQuery(function ($) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const media = gsap.matchMedia();
+    const heroImage = document.querySelector(".hero__image");
+
+    media.add("(prefers-reduced-motion: no-preference)", function () {
+      const heroTween = gsap.from(heroImage, {
+        autoAlpha: 0,
+        y: 48,
+        duration: 1.2,
+        ease: "power2.out",
+        paused: true,
+        clearProps: "opacity,visibility,transform"
+      });
+
+      // 이미지 다운로드가 끝난 뒤 페이드 업을 시작한다.
+      function showHero() {
+        heroTween.play();
+      }
+
+      if (heroImage.complete) {
+        showHero();
+      } else {
+        $(heroImage).one("load.hero error.hero", showHero);
+      }
+
+      $("[data-reveal-group]").each(function () {
+        const items = $(this).find("[data-reveal]").toArray();
+
+        gsap.from(items, {
+          autoAlpha: 0,
+          y: 28,
+          duration: 0.8,
+          stagger: 0.12,
+          ease: "power2.out",
+          clearProps: "opacity,visibility,transform",
+          scrollTrigger: {
+            trigger: this,
+            start: "top 85%",
+            once: true
+          }
+        });
+      });
+
+      return function () {
+        $(heroImage).off(".hero");
+      };
+    });
+
+    // 웹폰트와 이미지가 로드된 최종 레이아웃으로 트리거 위치를 갱신한다.
+    $(window).on("load.profile", function () {
+      ScrollTrigger.refresh();
+    });
+
+    if (document.fonts) {
+      document.fonts.ready.then(function () {
+        ScrollTrigger.refresh();
+      });
+    }
+  });
+})(window, document);
+
+    });
+  </script>
+</body>
+</html>

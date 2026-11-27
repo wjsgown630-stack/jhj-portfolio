@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="전해주 — UI/UX · 시각디자인 · 웹디자인 포트폴리오 프로필">
+  <title>전해주 | JEON HAEJU</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <main>
+    <!-- Figma 42:297 — 접속 시 페이드 업 -->
+    <section class="hero" aria-label="포트폴리오 인트로">
+      <img class="hero__image" src="https://cdn.jsdelivr.net/gh/wjsgown630-stack/IN_A_GOWN@main/%ED%94%84%EB%A1%9C%ED%95%84/image/backimg1.png" alt="부드러운 푸른색과 노란빛 물결이 어우러진 추상 이미지" width="1671" height="941" fetchpriority="high">
+    </section>
+
+    <!-- Figma 42:300 — 스크롤 시 순차 등장 -->
+    <section class="profile" aria-labelledby="profile-name">
+      <div class="profile__layout">
+        <div class="identity" data-reveal-group>
+          <img class="identity__photo" data-reveal src="https://cdn.jsdelivr.net/gh/wjsgown630-stack/IN_A_GOWN@main/%ED%94%84%EB%A1%9C%ED%95%84/image/jhj.webp" alt="전해주 프로필 사진" width="796" height="1024" decoding="async">
+          <div class="identity__copy">
+            <h1 id="profile-name" class="identity__name" data-reveal>전해주</h1>
+            <p class="identity__english" lang="en" data-reveal>JEON HAEJU</p>
+            <hr class="identity__rule" data-reveal>
+            <p class="identity__field" data-reveal>UI/UX · 시각디자인 · 웹디자인</p>
+            <p class="identity__intro" data-reveal>소개 문구를 입력해 주세요.</p>
+          </div>
+        </div>
+
+        <div class="profile__details">
+          <div class="profile__column">
+            <section class="info info--about" aria-labelledby="about-heading" data-reveal-group>
+              <h2 id="about-heading" class="info__heading" lang="en" data-reveal>About</h2>
+              <dl class="info__list">
+                <div class="info__row" data-reveal><dt lang="en">Name</dt><dd>전해주</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Age</dt><dd>만 24세 / 2002.09.11</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Phone</dt><dd><a href="tel:01000000000">010-0000-0000</a></dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Email</dt><dd><a href="mailto:wjsgown135@naver.com">wjsgown135@naver.com</a></dd></div>
+              </dl>
+            </section>
+
+            <section class="info info--skills" aria-labelledby="skills-heading" data-reveal-group>
+              <h2 id="skills-heading" class="info__heading" lang="en" data-reveal>Skills</h2>
+              <dl class="info__list">
+                <div class="info__row" data-reveal><dt lang="en">Design</dt><dd lang="en">Figma · Photoshop · Illustrator</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Publishing</dt><dd lang="en">HTML · CSS</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">Interaction</dt><dd lang="en">JavaScript · jQuery</dd></div>
+                <div class="info__row" data-reveal><dt lang="en">AI</dt><dd>사용하는 AI 도구 입력</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <div class="profile__column">
+            <section class="info info--education" aria-labelledby="education-heading" data-reveal-group>
+              <h2 id="education-heading" class="info__heading" lang="en" data-reveal>Education</h2>
+              <div class="info__entries">
+                <div class="education-entry" data-reveal>
+                  <h3>교육기관 또는 학교명 입력</h3>
+                  <p>전공 또는 과정명 입력</p>
+                  <p class="education-entry__date">YYYY.MM – YYYY.MM</p>
+                </div>
+                <div class="education-entry" data-reveal>
+                  <h3>교육기관 또는 학교명 입력</h3>
+                  <p>전공 또는 과정명 입력</p>
+                  <p class="education-entry__date">YYYY.MM – YYYY.MM</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="info info--license" aria-labelledby="license-heading" data-reveal-group>
+              <h2 id="license-heading" class="info__heading" lang="en" data-reveal>License</h2>
+              <div class="info__entries">
+                <div class="license-entry" data-reveal>
+                  <h3 lang="en">GTQ photoshop</h3>
+                  <div class="license-entry__meta"><p>KCP자격</p><time datetime="2024-06">2024.06</time></div>
+                </div>
+                <div class="license-entry" data-reveal>
+                  <h3>자격증명 입력</h3>
+                  <div class="license-entry__meta"><p>발급기관 입력</p><p class="license-entry__date">YYYY.MM</p></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

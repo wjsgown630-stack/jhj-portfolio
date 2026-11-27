@@ -1,0 +1,74 @@
+- main [ref=f1e2]:
+  - region "포트폴리오 인트로" [ref=f1e3]:
+    - img "부드러운 푸른색과 노란빛 물결이 어우러진 추상 이미지" [ref=f1e4]
+  - region "전해주" [ref=f1e5]:
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]:
+        - img "전해주 프로필 사진" [ref=f1e8]
+        - generic [ref=f1e9]:
+          - heading "전해주" [level=1] [ref=f1e10]
+          - paragraph [ref=f1e11]: JEON HAEJU
+          - separator [ref=f1e12]
+          - paragraph [ref=f1e13]: UI/UX · 시각디자인 · 웹디자인
+          - paragraph [ref=f1e14]: 소개 문구를 입력해 주세요.
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - region "About" [ref=f1e17]:
+            - heading "About" [level=2] [ref=f1e18]
+            - generic [ref=f1e19]:
+              - generic [ref=f1e20]:
+                - term [ref=f1e21]: Name
+                - definition [ref=f1e22]: 전해주
+              - generic [ref=f1e23]:
+                - term [ref=f1e24]: Age
+                - definition [ref=f1e25]: 만 24세 / 2002.09.11
+              - generic [ref=f1e26]:
+                - term [ref=f1e27]: Phone
+                - definition [ref=f1e28]:
+                  - link "010-0000-0000" [ref=f1e29] [cursor=pointer]:
+                    - /url: tel:01000000000
+              - generic [ref=f1e30]:
+                - term [ref=f1e31]: Email
+                - definition [ref=f1e32]:
+                  - link "wjsgown135@naver.com" [ref=f1e33] [cursor=pointer]:
+                    - /url: mailto:wjsgown135@naver.com
+          - region "Skills" [ref=f1e34]:
+            - heading "Skills" [level=2] [ref=f1e35]
+            - generic [ref=f1e36]:
+              - generic [ref=f1e37]:
+                - term [ref=f1e38]: Design
+                - definition [ref=f1e39]: Figma · Photoshop · Illustrator
+              - generic [ref=f1e40]:
+                - term [ref=f1e41]: Publishing
+                - definition [ref=f1e42]: HTML · CSS
+              - generic [ref=f1e43]:
+                - term [ref=f1e44]: Interaction
+                - definition [ref=f1e45]: JavaScript · jQuery
+              - generic [ref=f1e46]:
+                - term [ref=f1e47]: AI
+                - definition [ref=f1e48]: 사용하는 AI 도구 입력
+        - generic [ref=f1e49]:
+          - region "Education" [ref=f1e50]:
+            - heading "Education" [level=2] [ref=f1e51]
+            - generic [ref=f1e52]:
+              - generic [ref=f1e53]:
+                - heading "교육기관 또는 학교명 입력" [level=3] [ref=f1e54]
+                - paragraph [ref=f1e55]: 전공 또는 과정명 입력
+                - paragraph [ref=f1e56]: YYYY.MM – YYYY.MM
+              - generic [ref=f1e57]:
+                - heading "교육기관 또는 학교명 입력" [level=3] [ref=f1e58]
+                - paragraph [ref=f1e59]: 전공 또는 과정명 입력
+                - paragraph [ref=f1e60]: YYYY.MM – YYYY.MM
+          - region "License" [ref=f1e61]:
+            - heading "License" [level=2] [ref=f1e62]
+            - generic [ref=f1e63]:
+              - generic [ref=f1e64]:
+                - heading "GTQ photoshop" [level=3] [ref=f1e65]
+                - generic [ref=f1e66]:
+                  - paragraph [ref=f1e67]: KCP자격
+                  - time [ref=f1e68]: "2024.06"
+              - generic [ref=f1e69]:
+                - heading "자격증명 입력" [level=3] [ref=f1e70]
+                - generic [ref=f1e71]:
+                  - paragraph [ref=f1e72]: 발급기관 입력
+                  - paragraph [ref=f1e73]: YYYY.MM
